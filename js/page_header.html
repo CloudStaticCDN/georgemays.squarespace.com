@@ -4,11 +4,18 @@ window.addEventListener('load',function(){
     x = document.querySelector(".index-gallery-wrapper");
     xx = x.querySelectorAll(".image-container");
 
+    videoWidthMultiplier = 16/9;
+    windowHeight = window.innerHeight;
+    windowWidth = window.innerWidth;
+
+    videoWidth = videoWidthMultiplier*windowHeight;
+    videoLeftOffset = (videoWidth > windowWidth) ? (-(videoWidth - windowWidth)/2):0;
+
     videoCode = [];
-    videoCode[0] = '<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/bg_video.mp4" type="video/mp4"></video>';
-    videoCode[1] = '<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/commercial_720.mp4" type="video/mp4"></video>';
-    videoCode[2] = '<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/music_720.mp4" type="video/mp4"></video>';
-    videoCode[3] = '<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/films_720.mp4" type="video/mp4"></video>';
+    videoCode[0] = `<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready" style="height:${windowHeight}px;width:${videoWidth}px;left:${videoLeftOffset}px;top:0px;"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/bg_video.mp4" type="video/mp4"></video>`;
+    videoCode[1] = `<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready" style="height:${windowHeight}px;width:${videoWidth}px;left:${videoLeftOffset}px;top:0px;"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/commercial_720.mp4" type="video/mp4"></video>`;
+    videoCode[2] = `<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready" style="height:${windowHeight}px;width:${videoWidth}px;left:${videoLeftOffset}px;top:0px;"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/music_720.mp4" type="video/mp4"></video>`;
+    videoCode[3] = `<video autoplay="" muted="" loop="" id="vimeoplayer" class="background-video ready" style="height:${windowHeight}px;width:${videoWidth}px;left:${videoLeftOffset}px;top:0px;"><source src="https://github.com/CloudStaticCDN/georgemays.squarespace.com/raw/master/films_720.mp4" type="video/mp4"></video>`;
    
 
     y = [];
